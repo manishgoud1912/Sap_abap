@@ -31,6 +31,6 @@ ENDCLASS.
 
 *Key-Points :
 *1. get_vbak fetching data from table usig parameters,
-*2. get_vbap fetching data from table using selec options.
-*3. WHILE CALLING THIS CLASS IN PROGRAM CONVERT THE SELEC OPTION INTO A STRING ANTHEN PASS IT AS INPUT TO THIS CLASS.
+*2. get_vbap fetching data from table using select options.
+*3. WHILE CALLING THIS CLASS IN PROGRAM CONVERT THE SELECt OPTION INTO A STRING AND THEN PASS IT AS INPUT TO THIS Method (get_vbap).
 
