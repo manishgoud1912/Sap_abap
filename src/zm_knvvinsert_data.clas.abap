@@ -220,24 +220,7 @@ CLASS zm_knvvinsert_data IMPLEMENTATION.
     orderblock = ''
     deliveryblock = '' )
 
-  ( client = sy-mandt
-    customer = '1000000006'
-    salesorganization = '2000'
-    distributionchannel = '20'
-    division = '01'
-    salesoffice = '2001'
-    salesgroup = '003'
-    customergroup = '02'
-    customerpricegroup = '02'
-    pricedeterminationprocedure = '01'
-    shippingcondition = '02'
-    deliverypriority = '02'
-    currency = 'INR'
-    paymentterms = '0002'
-    accountassignmentgroup = '01'
-    salesdistrict = 'DEL001'
-    orderblock = ''
-    deliveryblock = '' )
+
 
 *---------------------------------------------------------------------*
 * Customer 1000000007
@@ -339,11 +322,17 @@ CLASS zm_knvvinsert_data IMPLEMENTATION.
     deliveryblock = '' )
 
 ).
-
+delete from zman_knvv.
 INSERT zman_knvv FROM TABLE @lt_knvv.
 
 IF sy-subrc = 0.
   COMMIT WORK.
 ENDIF.
+
+  IF sy-subrc = 0.
+      out->write( ' records inserted successfully.' ).
+    ELSE.
+      out->write( ' insertion failed or records already exist.' ).
+    ENDIF.
   ENDMETHOD.
 ENDCLASS.

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Flight Service'
+define service ZMAN_Connection_srv {
+  expose ZI_CONNECTION_MAN;
+}

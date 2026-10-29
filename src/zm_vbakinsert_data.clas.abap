@@ -421,7 +421,7 @@ lt_header = VALUE #(
     requesteddeliverydate = '20260425' )
 
 ).
-
+delete from zman_vbak .
 INSERT zman_vbak FROM TABLE @lt_header.
 
 IF sy-subrc = 0.

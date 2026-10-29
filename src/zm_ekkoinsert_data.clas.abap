@@ -329,5 +329,11 @@ INSERT zman_ekko FROM TABLE @lt_ekko.
 IF sy-subrc = 0.
   COMMIT WORK.
 ENDIF.
+
+  IF sy-subrc = 0.
+      out->write( ' records inserted successfully.' ).
+    ELSE.
+      out->write( ' insertion failed or records already exist.' ).
+    ENDIF.
   ENDMETHOD.
 ENDCLASS.

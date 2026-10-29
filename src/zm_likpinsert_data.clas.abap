@@ -589,5 +589,11 @@ INSERT zman_likp FROM TABLE @lt_likp.
 IF sy-subrc = 0.
   COMMIT WORK.
 ENDIF.
+
+  IF sy-subrc = 0.
+      out->write( ' records inserted successfully.' ).
+    ELSE.
+      out->write( ' insertion failed or records already exist.' ).
+    ENDIF.
   ENDMETHOD.
 ENDCLASS.
