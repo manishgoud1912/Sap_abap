@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service defination for salesorder details'
+define service ZMAN_SALESORDER_SRV {
+  expose ZI_SALESORDER_MAN;
+  expose ZI_LINEITEM_DETAILS_MAN;
+}
