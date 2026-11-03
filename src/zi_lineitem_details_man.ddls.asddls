@@ -2,6 +2,8 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Sales Line Item Info (VBAP'
 @Metadata.ignorePropagatedAnnotations: true
+
+@Search.searchable: true
 define view entity ZI_LINEITEM_DETAILS_MAN
   as select from zman_vbap
 {
@@ -23,11 +25,12 @@ define view entity ZI_LINEITEM_DETAILS_MAN
       material              as Material,
        @UI.identification: [{ position: 40,label: 'Material Description' }]
       @UI.lineItem: [{ position: 40 }]
+       @Search.defaultSearchElement: true
       materialdescription   as Materialdescription,
        @UI.identification: [{ position: 50,label: 'Plant' }]
       @UI.lineItem: [{ position: 50 }]
       plant                 as Plant,
-       @UI.identification: [{ position: 60,label: 'Storage Location' }]     
+       @UI.identification: [{ position: 60,label: 'Storage Location' }]         
       storagelocation       as Storagelocation,
        @UI.identification: [{ position: 70,label: 'ItemCategory' }]   
       itemcategory          as Itemcategory,
